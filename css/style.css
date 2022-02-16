@@ -1,0 +1,182 @@
+*,
+ ::before,
+ ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    font-family: 'Roboto';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.inspiration {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    float: left;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.section-heading {
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.section-heading h1 {
+    width: 60%;
+    font-size: 25px;
+    color: #222222;
+}
+
+.section-heading .scroll-btns {
+    visibility: hidden;
+    width: 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.section-heading .scroll-btns .bubble {
+    width: max-content;
+    padding: 6px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.5;
+    color: rgb(221, 221, 221);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .4));
+    cursor: not-allowed;
+}
+
+.section-heading .scroll-btns .bubble:first-of-type {
+    margin-right: 10px;
+}
+
+.section-heading .scroll-btns .active {
+    opacity: 1;
+    color: #222222;
+    cursor: pointer;
+}
+
+.inspiration .slider-wrapper {
+    width: 100%;
+    float: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.inspiration .slider {
+    width: 100%;
+    height: 300px;
+    padding: 15px 20px;
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    gap: 15px;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.inspiration .card {
+    display: block;
+    width: 100%;
+    min-width: 200px;
+    height: 280px;
+    min-height: 270px;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inspiration .card .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inspiration .card .image {
+    width: 100%;
+    height: 45%;
+}
+
+.inspiration .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inspiration .card .description {
+    width: 100%;
+    height: 55%;
+    padding: 20px 15px;
+    color: white;
+}
+
+.inspiration .card .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+}
+
+.inspiration .card .distance {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.inspiration .brighton .description {
+    background-color: rgb(204, 45, 74);
+}
+
+.inspiration .hastings .description {
+    background-color: rgb(222, 49, 81);
+}
+
+.inspiration .plymouth .description {
+    background-color: rgb(217, 59, 48);
+}
+
+.inspiration .margate .description {
+    background-color: rgb(188, 26, 110);
+}
+
+@media screen and (max-width:730px) {
+    .section-heading .scroll-btns {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .inspiration .card .title {
+        font-size: 20px;
+    }
+    .inspiration .slider {
+        width: 250%;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .inspiration .slider {
+        width: 300%;
+    }
+    .inspiration .card {
+        height: 200px;
+    }
+}
